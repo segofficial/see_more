@@ -1,0 +1,88 @@
+<!doctype html>
+<title>See more</title>
+<style>
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #222;
+     color: #eee;
+ }
+ h1 {
+     text-decoration: underline;
+     clear: left;
+     margin-left: 10px;
+ }
+ div.table > div {
+     margin: 10px;
+ }
+ div.perks > * {
+     margin: 10px;
+ }
+ div.col {
+     float: left;
+ }
+ .person {
+ }
+ .perks h2 {
+     color: gold;
+ }
+ h2 > .points {
+     color: gold;
+ }
+ p >.points {
+     color: red;
+ }
+ .key {
+     color: red;
+ }
+</style>
+<h1>SEG Points:</h1>
+<div class="table">
+    <div class="col">
+        <h2>Super-Elite: <span class="points">{{ superelite[0] }}+</span></h2>
+        {% for row in superelite[1] %}
+        <p><span class="person">{{row.name}}</span>:
+            <span class="points">{{row.points}}</span></p>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>Elite: <span class="points">{{ elite[0] }}+</span></h2>
+        {% for row in elite[1] %}
+        <p><span class="person">{{row.name}}</span>:
+            <span class="points">{{row.points}}</span></p>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>Pro: <span class="points">{{ pro[0] }}+</span></h2>
+        {% for row in pro[1] %}
+        <p><span class="person">{{row.name}}</span>:
+            <span class="points">{{row.points}}</span></p>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>Member: <span class="points">{{ member[0] }}+</span></h2>
+        {% for row in member[1] %}
+        <p><span class="person">{{row.name}}</span>:
+            <span class="points">{{row.points}}</span></p>
+        {% endfor %}
+    </div>
+    <div class="col">
+        <h2>Beginner: <span class="points">{{ beginner[0] }}+</span></h2>
+        {% for row in beginner[1] %}
+        <p><span class="person">{{row.name}}</span>:
+            <span class="points">{{row.points}}</span></p>
+        {% endfor %}
+    </div>
+</div>
+<h1>SEG perks:</h1>
+<div class="perks">
+    <h2>Beginner</h2>
+    <p>You are now in the <span class="key">group</span> and have the ability to <span class="key">vote</span>.</p>
+    <h2>Member</h2>
+    <p>You can now give suggestions for posts on the <span class="key">Instagram</span> page and updates to the <span class="key">website</span>.</p>
+    <h2>Pro</h2>
+    <p>You can now give suggestions for <span class="key">votes</span> and people to <span class="key">join</span> the group.</p>
+    <h2>Elite</h2>
+    <p>You will now gain <span class="key">respect</span> from lower levels and can look over beginners and <span class="key">report</span> actions to leaders.</p>
+    <h2>Super-Elite</h2>
+    <p>You are now in the <span class="key">SEG administration</span> and are involved in deciding <span class="key">important matters</span>.</p>
+</div>
